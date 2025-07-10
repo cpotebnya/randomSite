@@ -9,5 +9,9 @@ phases:
       - npm run build
 artifacts: 
   files:
-    - '**/*'
+    - public/**/*
+    - src/**/*
+    - package.json
+    - appspec.yml
+    - scripts/**/*
   base-directory: 'dist'
