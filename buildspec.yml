@@ -6,7 +6,7 @@ phases:
       - npm install
     builds:
       commands:
-        - npm install buildProduction
+        - npm run build
   artifacts: 
     files:
       - '**/*'
