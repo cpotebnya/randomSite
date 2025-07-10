@@ -1,30 +1,23 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import CountdownTimer from './components/Countdown.jsx'
+import { Box, Image, Heading, Center, Flex } from "@chakra-ui/react"
+import moose from './assets/moose.png'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          This is a change 2
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Box height="100vh" background="#472243" color="#ffffff">
+      <Center height="80vh">
+        <Flex direction="column" alignItems="center">
+          <Image src={moose} height="100px" width='120px' alt="Logo" />
+          <Heading marginTop="2rem" size="4xl">Countdown to swag o'clock</Heading>
+          <div className="card">
+            <CountdownTimer />
+          </div>
+        </Flex>
+      </Center>
+    </Box>
   )
 }
 
