@@ -40,30 +40,30 @@ const CountdownTimer = () => {
     }, [eventDate]);
 
     return (
-        <Flex marginTop="3rem" gap="4em">
+        <Flex flexDirection="column" gap="2em" lg={{ flexDirection: "row", gap: '4rem' }} marginTop="3rem">
             <Center display="flex" flexDirection="column">
-                <Heading size="6xl">
+                <Heading size="5xl" lg={{ size: "6xl" }}>
                     { currentDays } 
                 </Heading>
-                <Heading marginTop="1rem">days</Heading>
+                <Heading>days</Heading>
             </Center>
             <Center display="flex" flexDirection="column">
-                <Heading size="6xl">
+                <Heading size="5xl" lg={{ size: "6xl" }}>
                     { currentHours }
                 </Heading>
-                <Heading marginTop="1rem">hours</Heading>
+                <Heading>hours</Heading>
             </Center>
             <Center display="flex" flexDirection="column">
-                <Heading size="6xl">
+                <Heading size="5xl" lg={{ size: "6xl" }}>
                     { currentMins }
                 </Heading>
-                <Heading marginTop="1rem">minutes</Heading>
+                <Heading>minutes</Heading>
             </Center>
             <Center display="flex" flexDirection="column">
-                <Heading size="6xl">
+                <Heading size="5xl" lg={{ size: "6xl" }}>
                     { currentSeconds } 
                 </Heading>
-                <Heading marginTop="1rem">seconds</Heading>
+                <Heading>seconds</Heading>
             </Center>
         </Flex>
     );
