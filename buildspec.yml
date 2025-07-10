@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - npm install
+    builds:
+      commands:
+        - npm install buildProduction
+  artifacts: 
+    files:
+      - '**/*'
+    base-directory: 'dist'
