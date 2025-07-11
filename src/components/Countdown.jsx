@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Flex, Heading, Center } from "@chakra-ui/react";
+import { Flex, Heading, Center, Spinner } from "@chakra-ui/react";
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime'
 
@@ -43,25 +43,25 @@ const CountdownTimer = () => {
         <Flex flexDirection="column" gap="2em" lg={{ flexDirection: "row", gap: '4rem' }} marginTop="3rem">
             <Center display="flex" flexDirection="column">
                 <Heading size="5xl" lg={{ size: "6xl" }}>
-                    { currentDays } 
+                    { currentDays || <Spinner /> } 
                 </Heading>
                 <Heading>days</Heading>
             </Center>
             <Center display="flex" flexDirection="column">
                 <Heading size="5xl" lg={{ size: "6xl" }}>
-                    { currentHours }
+                    { currentHours || <Spinner /> }
                 </Heading>
                 <Heading>hours</Heading>
             </Center>
             <Center display="flex" flexDirection="column">
                 <Heading size="5xl" lg={{ size: "6xl" }}>
-                    { currentMins }
+                    { currentMins || <Spinner /> }
                 </Heading>
                 <Heading>minutes</Heading>
             </Center>
             <Center display="flex" flexDirection="column">
                 <Heading size="5xl" lg={{ size: "6xl" }}>
-                    { currentSeconds } 
+                    { currentSeconds || <Spinner /> } 
                 </Heading>
                 <Heading>seconds</Heading>
             </Center>
