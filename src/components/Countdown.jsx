@@ -7,10 +7,10 @@ const CountdownTimer = () => {
     dayjs.extend(relativeTime);
     const eventDate = dayjs('2025-07-22 12:00');
     const now = dayjs();
-    const [currentDays, setCurrentDays] = useState(0);
-    const [currentHours, setCurrentHours] = useState(0);
-    const [currentMins, setCurrentMins] = useState(0);
-    const [currentSeconds, setCurrentSeconds] = useState(0);
+    const [currentDays, setCurrentDays] = useState(null);
+    const [currentHours, setCurrentHours] = useState(null);
+    const [currentMins, setCurrentMins] = useState(null);
+    const [currentSeconds, setCurrentSeconds] = useState(null);
 
 
     useEffect(() => {
@@ -38,25 +38,25 @@ const CountdownTimer = () => {
         <Flex flexDirection="column" gap="2em" lg={{ flexDirection: "row", gap: '4rem' }} marginTop="3rem">
             <Center display="flex" flexDirection="column">
                 <Heading size="5xl" lg={{ size: "6xl" }}>
-                    { currentDays || <Spinner /> } 
+                    { currentDays !== null ? currentDays : <Spinner /> } 
                 </Heading>
                 <Heading>days</Heading>
             </Center>
             <Center display="flex" flexDirection="column">
                 <Heading size="5xl" lg={{ size: "6xl" }}>
-                    { currentHours || <Spinner /> }
+                    { currentHours!== null ? currentHours : <Spinner /> }
                 </Heading>
                 <Heading>hours</Heading>
             </Center>
             <Center display="flex" flexDirection="column">
                 <Heading size="5xl" lg={{ size: "6xl" }}>
-                    { currentMins || <Spinner /> }
+                    { currentMins !== null ? currentMins : <Spinner /> }
                 </Heading>
                 <Heading>minutes</Heading>
             </Center>
             <Center display="flex" flexDirection="column">
                 <Heading size="5xl" lg={{ size: "6xl" }}>
-                    { currentSeconds || <Spinner /> } 
+                    { currentSeconds !== null ? currentSeconds : <Spinner /> } 
                 </Heading>
                 <Heading>seconds</Heading>
             </Center>
