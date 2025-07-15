@@ -15,6 +15,7 @@ function App() {
           <div className="card">
             <CountdownTimer />
           </div>
+          <Heading size="sm" marginTop="2rem">You're fucking killing me Scott</Heading>
         </Flex>
       </Center>
     </Box>
