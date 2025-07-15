@@ -5,7 +5,7 @@ import relativeTime from 'dayjs/plugin/relativeTime'
 
 const CountdownTimer = () => {
     dayjs.extend(relativeTime);
-    const eventDate = dayjs('2025-07-15 12:00');
+    const eventDate = dayjs('2025-07-22 12:00');
     const now = dayjs();
     const [currentDays, setCurrentDays] = useState(0);
     const [currentHours, setCurrentHours] = useState(0);
