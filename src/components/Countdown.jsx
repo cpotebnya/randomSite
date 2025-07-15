@@ -24,11 +24,6 @@ const CountdownTimer = () => {
             let secondDiff = eventDate.diff(now, 's')
             secondDiff = secondDiff % 60
 
-            if (dayDiff <= 0) {
-                clearInterval(countdownInterval);
-                alert("Countdown complete!");
-            }
-
                 setCurrentDays(dayDiff);
                 setCurrentHours(hourDiff);
                 setCurrentMins(minuteDiff);
