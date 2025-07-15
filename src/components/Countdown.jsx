@@ -44,7 +44,7 @@ const CountdownTimer = () => {
             </Center>
             <Center display="flex" flexDirection="column">
                 <Heading size="5xl" lg={{ size: "6xl" }}>
-                    { currentHours!== null ? currentHours : <Spinner /> }
+                    { currentHours !== null ? currentHours : <Spinner /> }
                 </Heading>
                 <Heading>hours</Heading>
             </Center>
